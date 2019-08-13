@@ -1,0 +1,79 @@
+{
+    "app-id" : "org.gnome.HexGL",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.32",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "gnome-hexgl",
+    "default-branch": "stable",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--filesystem=host",
+        "--device=dri"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/share/gtk-doc",
+        "/share/installed-tests",
+        "/libexec/installed-tests",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+        {
+            "name" : "gsound",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gsound.git",
+                    "tag" : "1.0.2"
+                }
+            ],
+            "cleanup" : [
+                "/bin"
+            ]
+        },
+        {
+            "name" : "graphene",
+            "buildsystem": "meson",
+            "builddir": true,
+            "config-opts" : ["-Dgtk_doc=false", "-Dgobject_types=true"],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/ebassi/graphene",
+                    "tag" : "1.9.6"
+                }
+            ]
+        },
+        {
+            "name" : "gthree",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/alexlarsson/gthree",
+                    "tag" : "0.1.0"
+                }
+            ]
+        },
+        {
+            "name" : "gnome-hexgl",
+            "buildsystem": "meson",
+            "builddir": true,
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/alexlarsson/gnome-hexgl",
+                    "tag" : "0.1"
+                }
+            ]
+        }
+    ]
+}
