@@ -55,6 +55,7 @@
             "name" : "gthree",
             "buildsystem": "meson",
             "builddir": true,
+            "config-opts" : ["-Dintrospection=false"],
             "sources" : [
                 {
                     "type" : "git",
