@@ -1,8 +1,8 @@
 {
     "app-id" : "org.gnome.HexGL",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.32",
-    "sdk" : "org.gnome.Sdk",
+    "runtime" : "org.freedesktop.Platform",
+    "runtime-version" : "20.08",
+    "sdk" : "org.freedesktop.Sdk",
     "command" : "gnome-hexgl",
     "default-branch": "stable",
     "finish-args" : [
