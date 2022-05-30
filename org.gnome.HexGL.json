@@ -75,6 +75,10 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gnome-hexgl.git"
+                },
+                {
+                    "type":"patch",
+                    "path":"0001-Replace-screenshot-URL.patch"
                 }
             ]
         }

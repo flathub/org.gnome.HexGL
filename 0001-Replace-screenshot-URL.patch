@@ -1,0 +1,29 @@
+From 68f10383e7dfede7f684390125ff70a40560d581 Mon Sep 17 00:00:00 2001
+From: bbhtt <62639087+bbhtt@users.noreply.github.com>
+Date: Mon, 30 May 2022 13:23:12 +0530
+Subject: [PATCH] Replace screenshot URL
+
+---
+ org.gnome.HexGL.appdata.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/org.gnome.HexGL.appdata.xml b/org.gnome.HexGL.appdata.xml
+index 37589bd..bb6804e 100644
+--- a/org.gnome.HexGL.appdata.xml
++++ b/org.gnome.HexGL.appdata.xml
+@@ -32,10 +32,10 @@
+   </content_rating>
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://people.gnome.org/~alexl/gnome-hexgl-1.png</image>
++      <image width="921" height="712">https://raw.githubusercontent.com/bbhtt/org.gnome.HexGL/update-1-1/screenshots/screenshot1.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>https://people.gnome.org/~alexl/gnome-hexgl-2.png</image>
++      <image width="921" height="712">https://raw.githubusercontent.com/bbhtt/org.gnome.HexGL/update-1-1/screenshots/screenshot2.png</image>
+     </screenshot>
+   </screenshots>
+   <categories>
+--
+2.36.1
+
