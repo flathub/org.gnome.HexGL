@@ -27,11 +27,14 @@
         "shared-modules/libcanberra/libcanberra.json",
         {
             "name" : "gsound",
+            "buildsystem": "meson",
+            "builddir": true,
+            "config-opts" : ["-Denable_vala=false"],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gsound.git",
-                    "tag" : "1.0.2"
+                    "tag" : "1.0.3"
                 }
             ],
             "cleanup" : [
@@ -47,7 +50,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ebassi/graphene",
-                    "tag" : "1.10.0"
+                    "tag" : "1.10.8"
                 }
             ]
         },
@@ -60,7 +63,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gthree",
-                    "tag" : "0.2.0"
+                    "tag" : "0.9.0"
                 }
             ]
         },
