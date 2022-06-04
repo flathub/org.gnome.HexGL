@@ -63,7 +63,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gthree",
-                    "tag" : "0.9.0"
+                    "tag" : "0.2.0"
                 }
             ]
         },
@@ -74,8 +74,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/alexlarsson/gnome-hexgl.git",
-                    "commit" : "f47a351055a235730795341dcd6b2397cc4bfa0c"
+                    "url" : "https://github.com/alexlarsson/gnome-hexgl",
+                    "tag" : "0.2.0"
                 },
                 {
                     "type":"patch",
