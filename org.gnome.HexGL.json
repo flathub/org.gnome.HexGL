@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.HexGL",
     "runtime" : "org.freedesktop.Platform",
-    "runtime-version" : "21.08",
+    "runtime-version" : "23.08",
     "sdk" : "org.freedesktop.Sdk",
     "command" : "gnome-hexgl",
     "default-branch": "stable",
@@ -34,7 +34,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gsound.git",
-                    "tag" : "1.0.3"
+                    "tag" : "1.0.3",
+                    "commit": "95d36d60cf53e0e7c5d5325e0f1f4fc765a611ae"
                 }
             ],
             "cleanup" : [
@@ -50,7 +51,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ebassi/graphene",
-                    "tag" : "1.10.8"
+                    "tag" : "1.10.8",
+                    "commit": "4e2578450809c2099400cf85caf18eafcd7100aa"
                 }
             ]
         },
@@ -63,7 +65,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gthree",
-                    "tag" : "0.2.0"
+                    "tag" : "0.2.0",
+                    "commit": "ad92c3ec4a6237a16bef7910be2ef0fd7fbf2616"
                 }
             ]
         },
@@ -75,7 +78,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gnome-hexgl",
-                    "tag" : "0.2.0"
+                    "tag" : "0.2.0",
+                    "commit": "8c7667eec88d4586d83683da0fcccc369a8018bf"
                 },
                 {
                     "type":"patch",
