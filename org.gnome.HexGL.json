@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.HexGL",
     "runtime" : "org.freedesktop.Platform",
-    "runtime-version" : "21.08",
+    "runtime-version" : "23.08",
     "sdk" : "org.freedesktop.Sdk",
     "command" : "gnome-hexgl",
     "default-branch": "stable",
@@ -14,10 +14,18 @@
     ],
     "cleanup" : [
         "/include",
+        "/lib/girepository-1.0",
+        "/lib/gnome-settings-daemon-3.0",
+        "/lib/graphene-1.0",
         "/lib/pkgconfig",
         "/share/pkgconfig",
         "/share/aclocal",
+        "/share/doc",
+        "/share/gdm",
+        "/share/gnome",
+        "/share/gir-1.0",
         "/share/gtk-doc",
+        "/share/vala",
         "/share/installed-tests",
         "/libexec/installed-tests",
         "*.la",
@@ -34,7 +42,8 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gsound.git",
-                    "tag" : "1.0.3"
+                    "tag" : "1.0.3",
+                    "commit": "95d36d60cf53e0e7c5d5325e0f1f4fc765a611ae"
                 }
             ],
             "cleanup" : [
@@ -50,7 +59,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ebassi/graphene",
-                    "tag" : "1.10.8"
+                    "tag" : "1.10.8",
+                    "commit": "4e2578450809c2099400cf85caf18eafcd7100aa"
                 }
             ]
         },
@@ -63,7 +73,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gthree",
-                    "tag" : "0.2.0"
+                    "tag" : "0.2.0",
+                    "commit": "ad92c3ec4a6237a16bef7910be2ef0fd7fbf2616"
                 }
             ]
         },
@@ -71,15 +82,24 @@
             "name" : "gnome-hexgl",
             "buildsystem": "meson",
             "builddir": true,
+            "post-install": [
+                "rm ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
+                "install -Dm0644 ${FLATPAK_BUILDER_BUILDDIR}/hexgl.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png"
+            ],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://github.com/alexlarsson/gnome-hexgl",
-                    "tag" : "0.2.0"
+                    "tag" : "0.2.0",
+                    "commit": "8c7667eec88d4586d83683da0fcccc369a8018bf"
                 },
                 {
                     "type":"patch",
                     "path":"0001-Replace-screenshot-URL.patch"
+                },
+                {
+                    "type":"file",
+                    "path":"hexgl.png"
                 }
             ]
         }
