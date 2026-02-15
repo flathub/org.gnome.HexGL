@@ -51,20 +51,6 @@
             ]
         },
         {
-            "name" : "graphene",
-            "buildsystem": "meson",
-            "builddir": true,
-            "config-opts" : ["-Dgtk_doc=false", "-Dgobject_types=true"],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/ebassi/graphene",
-                    "tag" : "1.10.8",
-                    "commit": "4e2578450809c2099400cf85caf18eafcd7100aa"
-                }
-            ]
-        },
-        {
             "name" : "gthree",
             "buildsystem": "meson",
             "builddir": true,
