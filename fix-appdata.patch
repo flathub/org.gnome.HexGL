@@ -1,0 +1,55 @@
+From d5ede52e8e5160f627411820fed996076f097920 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Mon, 16 Feb 2026 03:41:51 +0300
+Subject: [PATCH] Fix appdata paper cuts
+
+---
+ org.gnome.HexGL.appdata.xml | 23 +++++++++++++++--------
+ 1 file changed, 15 insertions(+), 8 deletions(-)
+
+diff --git a/org.gnome.HexGL.appdata.xml b/org.gnome.HexGL.appdata.xml
+index 37589bd..c36ecdc 100644
+--- a/org.gnome.HexGL.appdata.xml
++++ b/org.gnome.HexGL.appdata.xml
+@@ -1,6 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
+-  <id>org.gnome.HexGL.desktop</id>
++<component type="desktop-application">
++  <id>org.gnome.HexGL</id>
++  <provides>
++    <id>org.gnome.HexGL.desktop</id>
++  </provides>
++  <replaces>
++    <id>org.gnome.HexGL.desktop</id>
++  </replaces>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>MIT</project_license>
+   <name>HexGL</name>
+@@ -32,16 +38,17 @@
+   </content_rating>
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://people.gnome.org/~alexl/gnome-hexgl-1.png</image>
++      <image>https://github.com/flathub/org.gnome.HexGL/raw/5fbc1763e26d09498ee625da6d3dc92c801f6f61/screenshots/screenshot1.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>https://people.gnome.org/~alexl/gnome-hexgl-2.png</image>
++      <image>https://github.com/flathub/org.gnome.HexGL/raw/5fbc1763e26d09498ee625da6d3dc92c801f6f61/screenshots/screenshot2.png</image>
+     </screenshot>
+   </screenshots>
+-  <categories>
+-    <category>Game</category>
+-  </categories>
+-  <project_group>GNOME</project_group>
+   <url type="homepage">https://github.com/alexlarsson/gnome-hexgl</url>
+   <url type="bugtracker">https://github.com/alexlarsson/gnome-hexgl/issues</url>
++  <url type="vcs-browser">https://github.com/alexlarsson/gnome-hexgl</url>
++  <launchable type="desktop-id">org.gnome.HexGL.desktop</launchable>
++  <developer id="io.github.alexlarsson">
++    <name>Alexander Larsson</name>
++  </developer>
+ </component>
+--
+libgit2 1.7.2
+
